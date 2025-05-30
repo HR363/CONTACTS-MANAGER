@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card form-section">
+            <h2 id="form-title">Add Contact</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company">
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary" id="save-btn">Save Contact</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-btn" style="display: none;">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card contacts-section">
+            <h2>Contacts</h2>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search contacts...">
+            </div>
+            <div class="contacts-grid" id="contacts-list">
+                <div class="empty-state">
+                    <h3>No contacts yet</h3>
+                    <p>Add your first contact to get started</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="dist/main.js"></script>
+</body>
+</html>
